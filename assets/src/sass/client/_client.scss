@@ -1,0 +1,38 @@
+.league-client {
+	overflow: hidden;
+	display: flex;
+	flex-flow: row wrap;
+	background: url('../images/qiyana.jpg') right center no-repeat;
+	transition: background-size 2s ease-out;
+	background-size: 105%;
+
+	body.logging & {
+		background-size: 105%;
+	}
+
+	.loaded & {
+		background-size: 100%;
+	}
+
+	&--left {
+		transition: .2s ease;
+		flex: 0 0 30%;
+		background: url('../images/left-panel.png') no-repeat top center;
+		padding: 40px 60px;
+
+		display: flex;
+		transform: translate(-100%, 0px);
+
+		body.logging & {
+			transform: translate(-100%, 0px);
+		}
+
+		.loaded & {
+			transform: translate(0px, 0px);
+		}
+	}
+
+	&--right {
+		flex: 0 0 70%;
+	}
+}
